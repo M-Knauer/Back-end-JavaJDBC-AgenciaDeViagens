@@ -7,7 +7,7 @@ public class Conexao {
 	
 	private final static String url = "jdbc:mysql://localhost:3306/agencia_de_viagens";
 	private final static String user = "root";
-	private final static String pass = "primogenito";
+	private final static String pass = System.getenv("sqlpw");
 	private static Connection conexao = null;
 	
 	

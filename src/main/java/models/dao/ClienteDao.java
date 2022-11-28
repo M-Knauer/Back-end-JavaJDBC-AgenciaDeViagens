@@ -4,7 +4,6 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
-import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -43,8 +42,7 @@ public class ClienteDao {
 			
 			List<Cliente> clientes = new ArrayList<Cliente>();
 			
-			Statement st = conn.createStatement();
-			ResultSet rs = st.executeQuery(comandoSql);
+			ResultSet rs = ps.executeQuery();
 			
 			while(rs.next()) {
 				
